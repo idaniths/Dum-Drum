@@ -1,23 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import SinglePad from "./components/Singlepad/SinglePad";
+import PadBoard from "./components/PadBoard/PadBoard";
 
 function App() {
+  // const newPadArray = new Array(16).fill("");
+  // const newPadsArray = new Array(8).fill("");
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <PadBoard />
+        {/* {newPadsArray.map((e, i) => (
+          <div
+            key={i}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {newPadArray.map((e, i) => (
+              <SinglePad key={i} />
+            ))}
+          </div>
+        ))} */}
       </header>
     </div>
   );
